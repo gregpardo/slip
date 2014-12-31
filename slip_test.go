@@ -6,8 +6,8 @@ import (
 )
 
 var (
-	encoded []byte = []byte{0x01, esc, esc_esc, 0x02, esc, esc_end, 0x3, end}
-	decoded []byte = []byte{0x01, esc, 0x02, end, 0x03}
+	encoded = []byte{0x01, esc, escEsc, 0x02, esc, escEnd, 0x3, end}
+	decoded = []byte{0x01, esc, 0x02, end, 0x03}
 )
 
 func TestEncode(t *testing.T) {
